@@ -1,0 +1,13 @@
+img.demo {
+    width: 450px;
+    height: 713px;
+}
+
+img.demo-qr {
+    width: 280px;
+    height: 280px;
+}
+
+.demo-qr {
+    margin: 0 0 120px 50px;
+}
