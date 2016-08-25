@@ -48,7 +48,7 @@ const app = new Bue({
 
 [slide]
 # 目标分析
-* Vue? {:&.moveIn}
+* Vue?❌ {:&.moveIn}
 * 动态绑定? ❌
 * 对象变动监听(watch库)? ✅
 
