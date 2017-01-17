@@ -70,6 +70,22 @@ new Promise((resolve) => {
 console.log(3); // 问题: 为什么输出是12354,而不是12345
 ```
 
+
+[slide]
+# macro-task VS micro-task
+> 异步任务的两种分类。
+在挂起任务时，JS 引擎会将所有任务按照类别分到这两个队列中，首先在 macrotask 的队列（这个队列也被叫做 task queue）中取出第一个任务，
+执行完毕后取出 microtask 队列中的所有任务顺序执行；
+之后再取 macrotask 任务，周而复始，直至两个队列的任务都取完。
+1. macro-task: script（整体代码）, setTimeout, setInterval, setImmediate, I/O, UI rendering
+2. micro-task: process.nextTick, Promises（这里指浏览器实现的原生 Promise）, Object.observe, MutationObserver
+
+出处:[图灵社区:Promise/A+规范](http://www.ituring.com.cn/article/66566)
+
+
+
+[slide]
+# 更加复杂的promise
 ```js
 setTimeout(() => {console.log(4);},0);
 new Promise((resolve) => {
@@ -91,16 +107,6 @@ console.log(3); // 输出: 123567849
 ```
 
 
-[slide]
-# macro-task VS micro-task
-> 异步任务的两种分类。
-在挂起任务时，JS 引擎会将所有任务按照类别分到这两个队列中，首先在 macrotask 的队列（这个队列也被叫做 task queue）中取出第一个任务，
-执行完毕后取出 microtask 队列中的所有任务顺序执行；
-之后再取 macrotask 任务，周而复始，直至两个队列的任务都取完。
-1. macro-task: script（整体代码）, setTimeout, setInterval, setImmediate, I/O, UI rendering
-2. micro-task: process.nextTick, Promises（这里指浏览器实现的原生 Promise）, Object.observe, MutationObserver
-
-出处:[图灵社区:Promise/A+规范](http://www.ituring.com.cn/article/66566)
 
 
 
@@ -156,7 +162,6 @@ p(1000).then((data) => {
 ```
 
 [slide]
-# 实例-generator与co实现
 ```js
 function p(time) {
   return new Promise((resolve, reject) => {
