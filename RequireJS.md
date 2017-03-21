@@ -10,7 +10,7 @@ usemathjax: yes
 
 # 如何实现异步模块加载器
 ## 以requireJS为例
-### [@梁少峰](https://github.com/youngwind/fake-requirejs)
+### [@梁少峰](https://github.com/youngwind/blog/issues/98)
 
 [slide]
 # Why
