@@ -1,0 +1,63 @@
+{
+    "modules": {
+        "/Users/youngwind/www/fake-webpack/examples/simple/example.js": {
+            "id": 0,
+            "filename": "/Users/youngwind/www/fake-webpack/examples/simple/example.js",
+            "name": "/Users/youngwind/www/fake-webpack/examples/simple/example.js",
+            "requires": [
+                {
+                    "name": "a",
+                    "nameRange": [
+                        16,
+                        19
+                    ],
+                    "id": 1
+                },
+                {
+                    "name": "b",
+                    "nameRange": [
+                        38,
+                        41
+                    ],
+                    "id": 2
+                },
+                {
+                    "name": "c",
+                    "nameRange": [
+                        60,
+                        63
+                    ],
+                    "id": 3
+                }
+            ],
+            "source": "let a = require('a');\nlet b = require('b');\nlet c = require('c');\na();\nb();\nc();\n"
+        },
+        "/Users/youngwind/www/fake-webpack/examples/simple/a.js": {
+            "id": 1,
+            "filename": "/Users/youngwind/www/fake-webpack/examples/simple/a.js",
+            "name": "a",
+            "requires": [],
+            "source": "// module a\n\nmodule.exports = function () {\n    console.log('a')\n};"
+        },
+        "/Users/youngwind/www/fake-webpack/examples/simple/b.js": {
+            "id": 2,
+            "filename": "/Users/youngwind/www/fake-webpack/examples/simple/b.js",
+            "name": "b",
+            "requires": [],
+            "source": "// module b\n\nmodule.exports = function () {\n    console.log('b')\n};"
+        },
+        "/Users/youngwind/www/fake-webpack/examples/simple/node_modules/c.js": {
+            "id": 3,
+            "filename": "/Users/youngwind/www/fake-webpack/examples/simple/node_modules/c.js",
+            "name": "c",
+            "requires": [],
+            "source": "module.exports = function () {\n    console.log('c')\n}"
+        }
+    },
+    "mapModuleNameToId": {
+        "/Users/youngwind/www/fake-webpack/examples/simple/example.js": 0,
+        "a": 1,
+        "b": 2,
+        "c": 3
+    }
+}
