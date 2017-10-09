@@ -53,7 +53,7 @@ module.exports = function () {
 * 以数字为键值的 modules 集合
 
 ---
-### Webpack 本质 → 字符串拼接工具
+### 早期 Webpack 本质 → 字符串拼接工具
 
 
 [slide]
@@ -73,10 +73,11 @@ module.exports = function () {
 [slide]
 # 以数字为模块 id
 ---
-### 要注意从后往前替换
+### 从后往前替换
 
 [slide]
 # 延伸
+1. [本文对应源码](https://github.com/youngwind/fake-webpack/tree/1bfcd0edf10f1a2ff3bfd7c418e7490a735b9823)
 1. [webpack源码学习系列之二：code-splitting（代码切割）](https://github.com/youngwind/blog/issues/100)
 2. [webpack源码学习系列之三：loader 机制](https://github.com/youngwind/blog/issues/101)
 
